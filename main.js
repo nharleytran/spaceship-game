@@ -18,17 +18,24 @@ const idirector = new InvadersDirector(canvas,gameIsOver,mdirector,tank);
 
 function game() {
   checkGameOver();
-  // playsound();
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
   if(!gameIsOver){
+
     tank.draw(ctx);
     tank.move(canvas.width);
-    // console.log(tank.gameOn);
+    mdirector.draw(ctx);
+
     ctx.font = "16px Arial";
     ctx.fillStyle = "#0095DD";
     ctx.fillText("Missiles remaining: "+ (10 - mdirector.missilesList.length) , 10, 40);
-    mdirector.draw(ctx);
+
+    ctx.font = "16px Arial";
+    ctx.fillStyle = "#0095DD";
+    ctx.fillText("Invders shot down: "+ idirector.invaderShotDown , 10, 20);
+
+
+    //Signal when to start the game
     if (tank.gameOn > 0){
       backgroundMusic.play();
       idirector.arrive(100);
@@ -36,6 +43,7 @@ function game() {
       idirector.draw(ctx);
     }
     window.requestAnimationFrame(game);
+    
   }else{
     backgroundMusic.pause();
     tank.x = canvas.width / 2 - 25;
@@ -44,9 +52,6 @@ function game() {
     ctx.fillStyle = "#0095DD";
     ctx.fillText("Game Over!", 10, 40);
   }
-  ctx.font = "16px Arial";
-  ctx.fillStyle = "#0095DD";
-  ctx.fillText("Invders shot down: "+ idirector.invaderShotDown , 10, 20);
 }
 
 function checkGameOver(){
