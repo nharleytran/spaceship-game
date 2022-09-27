@@ -12,7 +12,7 @@ class InvadersDirector {
         this.gameIsOver = false;
         this.maxInvaders = 10;
         this.mdirector = mdirector;
-        this.explosionSound = new Audio("../assets/explosion.wav"); 
+        this.explosionSound = new Audio("./assets/explosion.wav"); 
     }  
 
     draw(ctx) {

@@ -5,7 +5,7 @@ class Invaders extends Block {
     super(x, y, 40,40);
     this.canvas = canvas;
     this.img = new Image(40,40);
-    this.img.src = "../assets/invader.png"
+    this.img.src = "./assets/invader.png"
     this.displacement = Math.floor(Math.random() * ((5) - 1) + 1);
     this.y = 0;
     this.x = Math.floor(Math.random() * ((canvas.width-width) - 0) + 0);

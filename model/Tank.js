@@ -8,10 +8,10 @@ class Tank extends Sprite {
   constructor( x, y, mdirector, width, height, img) {
     super(x, y, 50, 50, img, 0, 0);
     this.img = new Image(50,50);
-    this.img.src = "../assets/tank.png"
+    this.img.src = "./assets/tank.png"
     this.displacement = 7;
     this.mdirector = mdirector;
-    this.fireSound = new Audio("../assets/shoot.wav"); 
+    this.fireSound = new Audio("./assets/shoot.wav"); 
     document.addEventListener("keydown", this.keyDownHandler.bind(this));
     document.addEventListener("keyup", this.keyUpHandler.bind(this));
   }

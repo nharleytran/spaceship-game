@@ -4,7 +4,7 @@ class Missiles extends Block {
   constructor( x, y, width, height, img) {
     super( x, y, 15, 15);
     this.img = new Image(15,15);
-    this.img.src = "../assets/missile.png"
+    this.img.src = "./assets/missile.png"
     this.displacement = 3;
     this.visible = true;
   }
