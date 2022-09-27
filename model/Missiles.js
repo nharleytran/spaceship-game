@@ -6,7 +6,6 @@ class Missiles extends Block {
     this.img = new Image(15,15);
     this.img.src = "./assets/missile.png"
     this.displacement = 3;
-    this.visible = true;
   }
   draw(ctx){
       this.y -= this.displacement;

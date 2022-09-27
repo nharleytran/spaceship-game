@@ -10,23 +10,20 @@ class Invaders extends Block {
     this.y = 0;
     this.x = Math.floor(Math.random() * ((canvas.width-width) - 0) + 0);
     this.gameIsOver = false;
-    this.visible = true;
   }
   draw(ctx){ 
-    if (this.visible){
       this.y += this.displacement;
       // invader jiggle on the way down
-      this.x += Math.floor(Math.random() * ((0.5+0.5) + 0.5));
+      this.x += Math.round(Math.random()) * 2 - 1;
       // invader never jiggle off screen
       if(this.x < 0){
         this.x = 0;
-      } else if (this.x + this.width > this.canvas.Width){
-        this.x = this.canvas.Width - this.width;
-      } 
+      } else if (this.x + this.width > this.canvas.width){
+        this.x = this.canvas.width - this.width;
+      }
       ctx.beginPath();
       ctx.drawImage(this.img,this.x, this.y, this.width, this.height);
       ctx.closePath();
-    }
   }
   
 }
