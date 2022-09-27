@@ -49,7 +49,7 @@ function game() {
   }
   ctx.font = "16px Arial";
   ctx.fillStyle = "#0095DD";
-  ctx.fillText("Invders shot down: "+ idirector.invaderShotDown , 10, 20);
+  ctx.fillText("Invaders shot down: "+ idirector.invaderShotDown , 10, 20);
 }
 
 function checkGameOver(){
