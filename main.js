@@ -10,7 +10,7 @@ const ctx = canvas.getContext("2d");
 let x = canvas.width / 2 - 25;
 let y = canvas.height - 60;;
 let gameIsOver = false;
-const backgroundMusic = new Audio("../assets/music.mpeg");
+const backgroundMusic = new Audio("./assets/music.mpeg");
 
 const mdirector = new MissilesDirector();
 const tank = new Tank(x, y, mdirector); 

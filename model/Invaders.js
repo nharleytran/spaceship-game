@@ -16,7 +16,7 @@ class Invaders extends Block {
     if (this.visible){
       this.y += this.displacement;
       // invader jiggle on the way down
-      this.x += Math.floor(Math.random() * ((0.2+0.2) + 0.2));
+      this.x += Math.floor(Math.random() * ((0.5+0.5) + 0.5));
       // invader never jiggle off screen
       if(this.x < 0){
         this.x = 0;
